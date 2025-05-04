@@ -6,3 +6,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build.environment]
+  VITE_SPOTIFY_CLIENT_ID = "24df0f6abea64b2c8671922b0489324a"
+  VITE_REDIRECT_URI = "https://lighthearted-alfajores-1e4fa2.netlify.app/callback"
