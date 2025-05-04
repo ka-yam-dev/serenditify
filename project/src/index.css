@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/src/assets/fonts/CircularStd-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/src/assets/fonts/CircularStd-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/src/assets/fonts/CircularStd-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  html, body {
+    height: 100%;
+    @apply bg-spotify-black text-spotify-white;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-spotify-green text-spotify-black hover:bg-opacity-80;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-spotify-black hover:bg-opacity-80;
+  }
+  
+  .btn-outline {
+    @apply border border-white bg-transparent text-white hover:bg-white hover:bg-opacity-10;
+  }
+  
+  .card {
+    @apply bg-spotify-dark-gray rounded-lg p-4 transition-all duration-200 hover:bg-opacity-70;
+  }
+  
+  .player-progress {
+    @apply h-1 bg-spotify-light-gray bg-opacity-30 rounded-full overflow-hidden cursor-pointer;
+  }
+  
+  .player-progress-bar {
+    @apply h-full bg-spotify-white transition-all duration-100 ease-linear;
+  }
+  
+  .player-progress:hover .player-progress-bar {
+    @apply bg-spotify-green;
+  }
+  
+  .volume-slider {
+    @apply h-1 bg-spotify-light-gray bg-opacity-30 rounded-full overflow-hidden cursor-pointer;
+  }
+  
+  .volume-slider-bar {
+    @apply h-full bg-spotify-white transition-all duration-100 ease-linear;
+  }
+  
+  .volume-slider:hover .volume-slider-bar {
+    @apply bg-spotify-green;
+  }
+}
